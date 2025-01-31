@@ -100,4 +100,14 @@ class ModelBase extends CI_Model
         $this->db->order_by('id', 'desc'); // Urutkan sesuai kebutuhan
         return $this->db->get($table)->result(); // Kembalikan hasil
     }
+
+    public function all_detail_paket()
+    {
+        $query = $this->db->select('detail_paket.*, paket.name as paket')
+            ->from('detail_paket')
+            ->join('paket', 'paket.id=detail_paket.paket_id')
+            ->order_by('detail_paket.paket_id', 'ASC')
+            ->get();
+        return $query->result();
+    }
 }

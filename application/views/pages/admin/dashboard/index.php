@@ -17,7 +17,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
+                <!-- <div class="col-sm-12 col-md-6 col-lg-6">
                     <div class="card card-primary">
                         <div class="card-body">
                             <div class="row justify-content-between ">
@@ -30,22 +30,36 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
+                </div> -->
+                <div class="col-sm-12 col-md-6 col-lg-6">
                     <div class="card card-primary">
                         <div class="card-body">
                             <div class="row justify-content-between ">
                                 <div class="col-9 d-flex align-items-center">
-                                    <h3>Layanan</h3>
+                                    <h3>Paket</h3>
                                 </div>
                                 <div class="col-3 text-right">
-                                    <span class="fa fa-4x fa-clipboard-list"></span>
+                                    <span class="fa fa-4x fa-server"></span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="card card-primary">
+                        <div class="card-body">
+                            <div class="row justify-content-between ">
+                                <div class="col-9 d-flex align-items-center">
+                                    <h3>Detail Paket</h3>
+                                </div>
+                                <div class="col-3 text-right">
+                                    <span class="fa fa-4x fa-layer-group"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
                     <div class="card card-primary">
                         <div class="card-body">
                             <div class="row justify-content-between ">
@@ -59,7 +73,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="col-sm-12 col-md-6 col-lg-6">
                     <div class="card card-primary">
                         <div class="card-body">
                             <div class="row justify-content-between ">
@@ -73,7 +87,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="col-sm-12 col-md-6 col-lg-6">
                     <div class="card card-primary">
                         <div class="card-body">
                             <div class="row justify-content-between ">
@@ -87,7 +101,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
+                <!-- <div class="col-sm-12 col-md-6 col-lg-6">
                     <div class="card card-primary">
                         <div class="card-body">
                             <div class="row justify-content-between ">
@@ -100,7 +114,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
 
             </div>

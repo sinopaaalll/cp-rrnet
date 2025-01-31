@@ -55,9 +55,9 @@ $route['translate_uri_dashes'] = FALSE;
 
 // Landing Page
 $route['beranda'] = 'LandingPageController/index';
-$route['profil'] = 'LandingPageController/profil';
-$route['layanan'] = 'LandingPageController/layanan';
-$route['layanan/detail/(:any)'] = 'LandingPageController/layananDetail/$1';
+$route['tentang'] = 'LandingPageController/tentang';
+$route['paket'] = 'LandingPageController/paket';
+// $route['layanan/detail/(:any)'] = 'LandingPageController/layananDetail/$1';
 $route['galeri/(:num)'] = 'LandingPageController/galeri/$1';
 $route['galeri'] = 'LandingPageController/galeri';
 $route['kontak'] = 'LandingPageController/kontak';
@@ -70,20 +70,29 @@ $route['logout'] = 'AuthController/logout';
 // Control Management System
 $route['admin'] = 'HomeController/index';
 $route['admin/dashboard'] = 'HomeController/index';
+
 $route['admin/slider'] = 'SliderController/index';
 $route['admin/slider/tambah'] = 'SliderController/create';
 $route['admin/slider/edit/(:num)'] = 'SliderController/edit/$1';
 $route['admin/slider/hapus/(:num)'] = 'SliderController/destroy/$1';
-$route['admin/layanan'] = 'LayananController/index';
-$route['admin/layanan/tambah'] = 'LayananController/create';
-$route['admin/layanan/edit/(:num)'] = 'LayananController/edit/$1';
-$route['admin/layanan/lihat/(:num)'] = 'LayananController/show/$1';
-$route['admin/layanan/hapus/(:num)'] = 'LayananController/destroy/$1';
+
+$route['admin/paket'] = 'PaketController/index';
+$route['admin/paket/tambah'] = 'PaketController/create';
+$route['admin/paket/edit/(:num)'] = 'PaketController/edit/$1';
+$route['admin/paket/hapus/(:num)'] = 'PaketController/destroy/$1';
+
+$route['admin/detail_paket'] = 'DetailPaketController/index';
+$route['admin/detail_paket/tambah'] = 'DetailPaketController/create';
+$route['admin/detail_paket/edit/(:num)'] = 'DetailPaketController/edit/$1';
+$route['admin/detail_paket/hapus/(:num)'] = 'DetailPaketController/destroy/$1';
+
+
 $route['admin/galeri'] = 'GaleriController/index';
 $route['admin/galeri/tambah'] = 'GaleriController/create';
 $route['admin/galeri/edit/(:num)'] = 'GaleriController/edit/$1';
 $route['admin/galeri/hapus/(:num)'] = 'GaleriController/destroy/$1';
-$route['admin/profil'] = 'ProfilController/index';
+
+$route['admin/tentang'] = 'TentangController/index';
 $route['admin/kontak'] = 'KontakController/index';
 $route['admin/konfigurasi'] = 'KonfigurasiController/index';
 $route['admin/user'] = 'UserController/index';

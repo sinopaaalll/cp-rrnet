@@ -50,33 +50,40 @@ class UserController extends CI_Controller
         ));
 
         $i = $this->input;
-        $old_logo = $i->post('old_logo');
+        $old_foto = $i->post('old_foto');
 
-        if (empty($_FILES['logo']['name'])) {
-            $logo = $old_logo;
+        if (empty($_FILES['foto']['name'])) {
+            $foto = $old_foto;
         } else {
 
-            $old_photo_path = 'assets/uploads/user/' . $old_logo;
+            $old_photo_path = 'assets/uploads/user/' . $old_foto;
             if (file_exists($old_photo_path)) {
                 unlink($old_photo_path);
             }
 
             // Upload the new photo
-            if (!$this->upload->do_upload('logo')) {
+            if (!$this->upload->do_upload('foto')) {
                 $error = $this->upload->display_errors();
                 $this->session->set_flashdata('error', $error);
                 redirect('admin/user');
             } else {
-                $upload_data['logo'] = $this->upload->data();
-                $logo = $upload_data['logo']['file_name'];
+                $upload_data['foto'] = $this->upload->data();
+                $foto = $upload_data['foto']['file_name'];
             }
         }
 
-        $data = [
-            'desc' => htmlspecialchars($i->post('desc')),
-            'logo' => $logo,
-        ];
+        $old_password = $this->db->get_where('user', ['id' => $id])->row_array()['password'];
+        if ($i->post('password') == "") {
+            $pasword = $old_password;
+        } else {
+            $pasword = password_hash($i->post('password'), PASSWORD_DEFAULT);
+        }
 
+        $data = [
+            'nama' => htmlspecialchars($i->post('nama')),
+            'password' => $pasword,
+            'foto' => $foto,
+        ];
         // var_dump($data);
         // die();
 

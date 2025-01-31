@@ -43,9 +43,9 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <!-- <div class="dropdown-title">Logged in 5 min ago</div> -->
-                            <a href="<?= base_url('admin/user') ?>" class="dropdown-item has-icon">
+                            <!-- <a href="<?= base_url('admin/user') ?>" class="dropdown-item has-icon">
                                 <i class="far fa-user"></i> Profil User
-                            </a>
+                            </a> -->
                             <!-- <a href="features-settings.html" class="dropdown-item has-icon">
                                 <i class="fas fa-cog"></i> Settings
                             </a> -->

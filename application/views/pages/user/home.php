@@ -1,265 +1,244 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php $this->load->view('component/user/header') ?>
+<?php $this->load->view('component/user/topbar') ?>
 
-<head>
-    <?php $this->load->view('component/user/header') ?>
-</head>
+<?php
+function formatRupiah($number)
+{
+    return "Rp. " . number_format($number, 0, ',', '.');
+}
+?>
 
-<body class="animsition">
-
-    <!-- Header -->
-    <?php $this->load->view('component/user/topbar') ?>
-
-    <!-- Slider -->
-    <section class="section-slide">
-        <div class="wrap-slick1 rs2-slick1">
-            <div class="slick1">
-                <?php foreach ($sliders as $slider) { ?>
-
-                    <div class="item-slick1 bg-overlay1" style="background-image: url(<?= base_url('assets/uploads/slider/' . $slider->img) ?>);">
-                        <div class="container h-full">
-                            <div class="flex-col-c-m h-full p-t-100 p-b-60 respon5">
-
-
-                                <div class="layer-slick1 animated visible-false" data-appear="fadeInDown" data-delay="0">
-                                    <h2 class="ltext-104 txt-center cl0 p-t-22 p-b-40 respon1">
-                                        <?= $slider->title ?>
-                                    </h2>
+<main>
+    <!-- Slider Area Start-->
+    <div class="slider-area slider-bg ">
+        <div class="slider-active">
+            <!-- Single Slider -->
+            <div class="single-slider d-flex align-items-center slider-height ">
+                <div class="container">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-xl-6 col-lg-6 col-md-9 ">
+                            <div class="hero__caption">
+                                <!-- <span data-animation="fadeInLeft" data-delay=".3s">Best Domain & hosting service provider</span> -->
+                                <h1 data-animation="fadeInLeft" data-delay=".6s ">Nikmati Internet Dengan Harga Cepat Dan Tepat!</h1>
+                                <!-- <p data-animation="fadeInLeft" data-delay=".8s">Rr.Net Group merupakan salah satu perusahaan penyedia layanan Internet Service Provider (ISP), dalam menghadapi persaingan yang semakin ketat dan perubahan lingkungan yang cepat</p> -->
+                                <!-- Slider btn -->
+                                <br>
+                                <div class="slider-btns">
+                                    <!-- Hero-btn -->
+                                    <a data-animation="fadeInLeft" data-delay="1s" href="#about" class="btn radius-btn">Mulai</a>
                                 </div>
-
-                                <div class="layer-slick1 animated visible-false" data-appear="fadeInUp" data-delay="800">
-                                    <span class="ltext-202 txt-center cl0 respon2">
-                                        <?= $slider->desc ?>
-                                    </span>
-                                </div>
-
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="hero__img d-none d-lg-block f-right">
+                                <img src="<?= base_url('assets1/') ?>img/hero/hero_right.png" alt="" data-animation="fadeInRight" data-delay="1s">
                             </div>
                         </div>
                     </div>
-
-                <?php } ?>
-
-            </div>
-            <!-- <div class="wrap-slick1-dots p-lr-10"></div> -->
-        </div>
-    </section>
-
-
-    <!-- Profil -->
-    <section class="bg0 p-t-75 p-b-20">
-        <div class="container">
-            <div class="row p-b-10">
-                <div class="col-md-7 col-lg-8">
-                    <div class="p-t-7 p-r-85 p-r-15-lg p-r-0-md">
-                        <h3 class="ltext-103 cl2 p-b-16">
-                            Profil Perusahaan
-                        </h3>
-                        <?= getExcerptProfil(html_entity_decode($profil->desc)) ?>
-
-                        <div class="flex-l-m flex-w w-full p-t-45">
-                            <a href="<?= base_url('profil') ?>" class="flex-c-m stext-101 cl5 size-103 bg2 bor1 hov-btn1 p-lr-15 trans-04">
-                                Selengkapnya...
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="col-11 col-md-5 col-lg-4 m-lr-auto">
-                    <!-- <div class="how-bor1 "> -->
-                    <div class="hov-img0">
-                        <img src="<?= base_url('assets/uploads/profil/' . $profil->logo) ?>" alt="IMG">
-                    </div>
-                    <!-- </div> -->
                 </div>
             </div>
+            <!-- Single Slider -->
         </div>
-    </section>
-
-    <!-- Galeri -->
-    <section class="bg2 p-t-50 p-b-50">
-        <div class="container">
-            <div class="p-b-10">
-                <h3 class="ltext-103 cl5">
-                    Galeri Terbaru
-                </h3>
-            </div>
-
-            <div class="flex-w flex-sb p-t-36 gallery-lb">
-                <!-- item gallery -->
-                <?php foreach ($galeris as $galeri) { ?>
-
-                    <div class="wrap-item-gallery m-b-10">
-                        <a class="item-gallery bg-img1" href="<?= base_url('assets/uploads/galeri/' . $galeri->img) ?>" data-lightbox="gallery" style="background-image: url('<?= base_url('assets/uploads/galeri/' . $galeri->img) ?>');" title="<?= $galeri->title ?>"></a>
-                    </div>
-
-                <?php } ?>
-            </div>
-
-            <div class="flex-c-m flex-w w-full p-t-50">
-                <a href="<?= base_url('galeri') ?>" class="flex-c-m stext-101 cl5 size-103 bg0 bor1 hov-btn1 p-lr-15 trans-04">
-                    Selengkapnya...
-                </a>
-            </div>
-
-            <!-- Pagination -->
-            <!-- <div class="flex-c-m flex-w w-full p-t-38">
-                <a href="#" class="flex-c-m how-pagination1 trans-04 m-all-7 active-pagination1">
-                    1
-                </a>
-
-                <a href="#" class="flex-c-m how-pagination1 trans-04 m-all-7">
-                    2
-                </a>
-            </div> -->
+        <!-- Slider Shape -->
+        <div class="slider-shape d-none d-lg-block">
+            <img class="slider-shape1" src="<?= base_url('assets1/') ?>img/hero/top-left-shape.png" alt="">
         </div>
-    </section>
-
-
-    <!-- Layanan -->
-    <section class="sec-blog bg0 p-t-50 p-b-60">
-        <div class="container">
-            <div class="p-b-66">
-                <h3 class="ltext-103 cl5 txt-center respon1">
-                    Layanan
-                </h3>
-            </div>
-
-            <div class="row">
-                <?php foreach ($layanans as $layanan) { ?>
-                    <div class="col-sm-6 col-md-4 p-b-40">
-                        <div class="blog-item">
-                            <div class="hov-img0">
-                                <a href="<?= base_url('layanan/detail/' . $layanan->slug) ?>">
-                                    <img src="<?= base_url('assets/uploads/layanan/' . $layanan->img) ?>" alt="IMG-BLOG">
-                                </a>
-                            </div>
-
-                            <div class="p-t-15">
-                                <div class="stext-107 flex-w p-b-14">
-                                    <span class="m-r-3">
-                                        <span class="cl4">
-                                            By
-                                        </span>
-
-                                        <span class="cl5">
-                                            <?= $layanan->nama ?>
-                                        </span>
-                                    </span>
-
-                                    <span>
-                                        <span class="cl4">
-                                            on
-                                        </span>
-
-                                        <span class="cl5">
-                                            <?= date("d M Y", strtotime($layanan->times)) ?>
-                                        </span>
-                                    </span>
-                                </div>
-
-                                <h4 class="p-b-12">
-                                    <a href="<?= base_url('layanan/detail/' . $layanan->slug) ?>" class="mtext-101 cl2 hov-cl1 trans-04">
-                                        <?= $layanan->title ?>
-                                    </a>
-                                </h4>
-
-                                <p class="stext-108 cl6" style="text-align: justify;">
-                                    <?= getExcerpt($layanan->desc) ?>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                <?php } ?>
-
-                <div class="flex-c-m flex-w w-full p-t-10">
-                    <a href="<?= base_url('layanan') ?>" class="flex-c-m stext-101 cl5 size-103 bg2 bor1 hov-btn1 p-lr-15 trans-04">
-                        Selengkapnya...
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Footer -->
-    <?php $this->load->view('component/user/footer'); ?>
-
-
-    <!-- Back to top -->
-    <div class="btn-back-to-top" id="myBtn">
-        <span class="symbol-btn-back-to-top">
-            <i class="zmdi zmdi-chevron-up"></i>
-        </span>
     </div>
+    <!-- Slider Area End -->
+
+    <!--? Team -->
+    <section class="team-area section-padding40 section-bg1" id="about">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-12">
+                    <div class="section-tittle text-center mb-105">
+                        <h2>Optimalkan Pengalaman Internet Anda</h2>
+                        <p>Tingkatkan pengalaman Internet Anda dengan koneksi yang lebih cepat dan stabil. Dengan mengoptimalkan pengaturan pada teknologi jaringan.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6"">
+                    <div class=" single-cat">
+                    <div class="cat-icon">
+                        <img src="<?= base_url('assets1/') ?>img/icon/services1.svg" alt="">
+                    </div>
+                    <div class="cat-cap">
+                        <h5><a href="#">Reliabel Technician</a></h5>
+                        <p>Pemasangan dilakukan oleh tenaga ahli yang profesional</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="single-cat">
+                    <div class="cat-icon">
+                        <img src="<?= base_url('assets1/') ?>img/icon/services2.svg" alt="">
+                    </div>
+                    <div class="cat-cap">
+                        <h5><a href="#">24/7 Support</a></h5>
+                        <p>Kami selalu ada (24 Jam) untuk Membantu kelancaran internet anda</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="single-cat">
+                    <div class="cat-icon">
+                        <img src="<?= base_url('assets1/') ?>img/icon/services3.svg" alt="">
+                    </div>
+                    <div class="cat-cap">
+                        <h5><a href="#">100% Fiber Optic</a></h5>
+                        <p>Mentransmisikan data dengan kecepatan tinggi & latensi rendah</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 text-center">
+                <a href="<?= base_url('tentang') ?>" class="btn radius-btn">Tentang Kami <span class="fa fa-arrow-right"></span></a>
+            </div>
+
+        </div>
+    </section>
+    <!-- Services End -->
+
+    <!--? Pricing Card Start -->
+    <?php foreach ($paket as $key => $value) { ?>
+        <section class="pricing-card-area fix">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 col-lg-8">
+                        <div class="section-tittle text-center mb-90">
+                            <h2>Paket <?= $value->name ?></h2>
+                            <p><?= html_entity_decode($value->desc) ?></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <?php foreach ($detail_pakets as $key => $dp) {
+                        if ($value->id == $dp->paket_id) { ?>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10">
+                                <div class="single-card text-center mb-30">
+                                    <div class="card-top pb-3">
+                                        <span class="fas fa-4x fa-wifi pb-2"></span>
+                                        <!-- <img src="<?= base_url('assets1/') ?>img/icon/price1.svg" alt=""> -->
+                                        <h4 class="mb-3"><?= $dp->title ?></h4>
+                                        <h2><sup><i>Upto</i></sup> <?= $dp->sub_title ?>&nbsp; <i class="fas fa-arrows-alt-v"></i></h1>
+                                            <!-- <p>Starting at</p> -->
+                                    </div>
+                                    <div class="card-mid">
+                                        <h4><?= formatRupiah($dp->price) ?><span>/ Bulan</span></h4>
+                                        <p>Harga Sudah Termasuk PPN</p>
+                                    </div>
+                                    <div class="card-bottom">
+                                        <?= html_entity_decode($dp->detail_desc) ?>
+                                    </div>
+                                </div>
+                            </div>
+                    <?php }
+                    } ?>
+
+                </div>
+            </div>
+        </section>
+    <?php } ?>
+    <!-- Pricing Card End -->
+
+    <!--? About-1 Area Start -->
+    <div class="about-area1 section-padding40">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-xl-6 col-lg-4 col-md-6 col-sm-12">
+                    <div class="section-tittle mb-105">
+                        <h2 class="text-dark mb-3">Paket Terbaik yang kami Tawarkan</h2>
+                        <p>Kami menawarkan paket yang dapat memudahkan keperluan dan kebutuhan anda.</p>
+                    </div>
+                </div>
+                <?php foreach ($pakets as $key => $p) { ?>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3">
+                        <div class="card" style="border-radius: 10px;">
+                            <div class="card-body">
+                                <div class="row justify-content-between">
+                                    <div class="col-6">
+                                        <h2>Paket <?= $p->name ?></h2>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <span class="fas fa-2x fa-wifi mx-4"></span>
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <?= html_entity_decode($p->desc) ?>
+                                    </div>
+                                    <div class="col-12">
+                                        <a href="<?= base_url('paket') ?>" class="text-dark"> Cek Paket Internet <span class="fa fa-arrow-right"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+
+            </div>
+        </div>
+    </div>
+    <!-- About-1 Area End -->
 
 
-    <!--===============================================================================================-->
-    <script src="<?= base_url('') ?>assets/user/vendor/jquery/jquery-3.2.1.min.js"></script>
-    <!--===============================================================================================-->
-    <script src="<?= base_url('') ?>assets/user/vendor/animsition/js/animsition.min.js"></script>
-    <!--===============================================================================================-->
-    <script src="<?= base_url('') ?>assets/user/vendor/bootstrap/js/popper.js"></script>
-    <script src="<?= base_url('') ?>assets/user/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <!--===============================================================================================-->
-    <script src="<?= base_url('') ?>assets/user/vendor/select2/select2.min.js"></script>
-    <!--===============================================================================================-->
-    <script src="<?= base_url('') ?>assets/user/vendor/daterangepicker/moment.min.js"></script>
-    <script src="<?= base_url('') ?>assets/user/vendor/daterangepicker/daterangepicker.js"></script>
-    <!--===============================================================================================-->
-    <script src="<?= base_url('') ?>assets/user/vendor/slick/slick.min.js"></script>
-    <script src="<?= base_url('') ?>assets/user/js/slick-custom.js"></script>
-    <!--===============================================================================================-->
-    <script src="<?= base_url('') ?>assets/user/vendor/parallax100/parallax100.js"></script>
-    <script>
-        $('.parallax100').parallax100();
-    </script>
-    <!--===============================================================================================-->
-    <script src="<?= base_url('') ?>assets/user/vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
-    <script>
-        $('.gallery-lb').each(function() { // the containers for all your galleries
-            $(this).magnificPopup({
-                delegate: 'a', // the selector for gallery item
-                type: 'image',
-                gallery: {
-                    enabled: true
-                },
-                mainClass: 'mfp-fade',
-                image: {
-                    titleSrc: function(item) {
-                        return item.el.attr('title'); // mengambil title dari elemen <a>
-                    }
+    <!-- ask questions -->
+
+
+
+    <section class="ask-questions section-bg1 section-padding30 fix">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-8 col-lg-9 col-md-10 ">
+                    <!-- Section Tittle -->
+                    <div class="section-tittle text-center mb-90">
+                        <h2>Galeri</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row gallery-item">
+                <?php foreach ($galeris as $key => $g) { ?>
+                    <div class="col-md-4">
+                        <a href="<?= base_url('assets/uploads/galeri/' . $g->img) ?>" class="img-pop-up">
+                            <div class="single-gallery-image" style="background: url(<?= base_url('assets/uploads/galeri/' . $g->img) ?>);"></div>
+                        </a>
+                    </div>
+                <?php } ?>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-xl-12 ">
+                    <div class="more-btn text-center mt-20">
+                        <a href="<?= base_url('galeri') ?>" class="btn">Selengkapnya <span class="fa fa-arrow-right"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- End ask questions -->
+
+</main>
+
+<?php $this->load->view('component/user/footer') ?>
+
+<script>
+    // Smooth scrolling
+    document.addEventListener("DOMContentLoaded", function() {
+        const links = document.querySelectorAll('a[href^="#"]');
+        links.forEach(link => {
+            link.addEventListener("click", function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute("href").substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: "smooth",
+                    });
                 }
             });
         });
-    </script>
-
-    <!--===============================================================================================-->
-    <script src="<?= base_url('') ?>assets/user/vendor/isotope/isotope.pkgd.min.js"></script>
-    <!--===============================================================================================-->
-    <script src="<?= base_url('') ?>assets/user/vendor/sweetalert/sweetalert.min.js"></script>
-
-    <!--===============================================================================================-->
-    <script src="<?= base_url('') ?>assets/user/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script>
-        $('.js-pscroll').each(function() {
-            $(this).css('position', 'relative');
-            $(this).css('overflow', 'hidden');
-            var ps = new PerfectScrollbar(this, {
-                wheelSpeed: 1,
-                scrollingThreshold: 1000,
-                wheelPropagation: false,
-            });
-
-            $(window).on('resize', function() {
-                ps.update();
-            })
-        });
-    </script>
-    <!--===============================================================================================-->
-    <script src="<?= base_url('') ?>assets/user/js/main.js"></script>
-
-</body>
-
-</html>
+    });
+</script>

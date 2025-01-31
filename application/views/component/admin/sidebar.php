@@ -10,12 +10,12 @@
             <li class="<?= $this->uri->segment(2) === 'dashboard' ? "active" : "" ?>"><a class="nav-link" href="<?= base_url('admin/dashboard') ?>"><i class="fas fa-fire"></i> <span>Dashboard</span></a></li>
 
             <li class="menu-header">Media</li>
-            <li class="<?= $this->uri->segment(2) === 'slider' ? "active" : "" ?>"><a class="nav-link" href="<?= base_url('admin/slider') ?>"><i class="fas fa-arrow-right"></i> <span>Slider</span></a></li>
-            <li class="<?= $this->uri->segment(2) === 'layanan' ? "active" : "" ?>"><a class="nav-link" href="<?= base_url('admin/layanan') ?>"><i class="fas fa-clipboard-list"></i> <span>Layanan</span></a></li>
+            <li class="<?= $this->uri->segment(2) === 'paket' ? "active" : "" ?>"><a class="nav-link" href="<?= base_url('admin/paket') ?>"><i class="fas fa-server"></i> <span>Paket</span></a></li>
+            <li class="<?= $this->uri->segment(2) === 'detail_paket' ? "active" : "" ?>"><a class="nav-link" href="<?= base_url('admin/detail_paket') ?>"><i class="fas fa-layer-group"></i> <span>Detail Paket</span></a></li>
             <li class="<?= $this->uri->segment(2) === 'galeri' ? "active" : "" ?>"><a class="nav-link" href="<?= base_url('admin/galeri') ?>"><i class="fas fa-images"></i> <span>Galeri</span></a></li>
-            <li class="<?= $this->uri->segment(2) === 'profil' ? "active" : "" ?>"><a class="nav-link" href="<?= base_url('admin/profil') ?>"><i class="fas fa-building"></i> <span>Profil</span></a></li>
+            <li class="<?= $this->uri->segment(2) === 'tentang' ? "active" : "" ?>"><a class="nav-link" href="<?= base_url('admin/tentang') ?>"><i class="fas fa-building"></i> <span>Tentang</span></a></li>
             <li class="<?= $this->uri->segment(2) === 'kontak' ? "active" : "" ?>"><a class="nav-link" href="<?= base_url('admin/kontak') ?>"><i class="fas fa-phone"></i> <span>Kontak</span></a></li>
-            <li class="<?= $this->uri->segment(2) === 'konfigurasi' ? "active" : "" ?>"><a class="nav-link" href="<?= base_url('admin/konfigurasi') ?>"><i class="fas fa-cogs"></i> <span>Konfigurasi</span></a></li>
+            <!-- <li class="<?= $this->uri->segment(2) === 'konfigurasi' ? "active" : "" ?>"><a class="nav-link" href="<?= base_url('admin/konfigurasi') ?>"><i class="fas fa-cogs"></i> <span>Konfigurasi</span></a></li> -->
         </ul>
 
 

@@ -3,37 +3,39 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class LandingPageController extends CI_Controller
 {
-    protected $profilId = 1;
+    protected $tentangId = 1;
     protected $kontakId = 1;
 
     public function index()
     {
         $data = [
             'title' => "Home",
-            'sliders' => $this->ModelBase->all('slider'),
             'galeris' => $this->ModelBase->limit('galeri', 3, 'desc'),
-            'layanans' => $this->ModelBase->limitLayanan(3),
-            'profil' => $this->ModelBase->find('profil', $this->profilId),
+            'paket' => $this->ModelBase->limit('paket', 1, 'asc'),
+            'pakets' => $this->ModelBase->all('paket'),
+            'detail_pakets' => $this->ModelBase->all('detail_paket'),
+            'tentang' => $this->ModelBase->find('tentang', $this->tentangId),
         ];
         $this->load->view('pages/user/home', $data);
     }
 
-    public function profil()
+    public function tentang()
     {
         $data = [
-            'title' => "Profil Perusahaan",
-            'profil' => $this->ModelBase->find('profil', $this->profilId),
+            'title' => "Tentang Perusahaan",
+            'tentang' => $this->ModelBase->find('tentang', $this->tentangId),
         ];
-        $this->load->view('pages/user/profil', $data);
+        $this->load->view('pages/user/tentang', $data);
     }
 
-    public function layanan()
+    public function paket()
     {
         $data = [
-            'title' => "Layanan",
-            'layanans' => $this->ModelBase->limitLayanan(6),
+            'title' => "paket",
+            'pakets' => $this->ModelBase->all('paket'),
+            'detail_pakets' => $this->ModelBase->all('detail_paket'),
         ];
-        $this->load->view('pages/user/layanan', $data);
+        $this->load->view('pages/user/paket', $data);
     }
 
     public function layananDetail($slug)
@@ -72,8 +74,6 @@ class LandingPageController extends CI_Controller
         $config['cur_tag_open'] = '<li class="page-item active"><span class="page-link">';
         $config['cur_tag_close'] = '<span class="sr-only">(current)</span></span></li>';
         $config['attributes'] = array('class' => 'page-link');
-
-
 
 
         // Inisialisasi pagination

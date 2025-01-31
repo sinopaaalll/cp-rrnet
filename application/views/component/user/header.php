@@ -1,39 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="zxx">
 
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title><?= get_config_value('name') ?> &mdash; <?= $title ?></title>
-    <meta charset="UTF-8">
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="apple-touch-icon" href="<?= base_url('assets/uploads/konfigurasi/') . get_config_value('icon') ?>">
+    <link rel="manifest" href="site.webmanifest">
     <link rel="shortcut icon" type="image/x-icon" href="<?= base_url('assets/uploads/konfigurasi/') . get_config_value('icon') ?>">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="<?= base_url('') ?>assets/user/vendor/bootstrap/css/bootstrap.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="<?= base_url('') ?>assets/user/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="<?= base_url('') ?>assets/user/fonts/iconic/css/material-design-iconic-font.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="<?= base_url('') ?>assets/user/fonts/linearicons-v1.0.0/icon-font.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="<?= base_url('') ?>assets/user/vendor/animate/animate.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="<?= base_url('') ?>assets/user/vendor/css-hamburgers/hamburgers.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="<?= base_url('') ?>assets/user/vendor/animsition/css/animsition.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="<?= base_url('') ?>assets/user/vendor/select2/select2.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="<?= base_url('') ?>assets/user/vendor/daterangepicker/daterangepicker.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="<?= base_url('') ?>assets/user/vendor/slick/slick.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="<?= base_url('') ?>assets/user/vendor/MagnificPopup/magnific-popup.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="<?= base_url('') ?>assets/user/vendor/perfect-scrollbar/perfect-scrollbar.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="<?= base_url('') ?>assets/user/css/util.css">
-    <link rel="stylesheet" type="text/css" href="<?= base_url('') ?>assets/user/css/main.css">
-    <!--===============================================================================================-->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="<?= base_url('assets1/') ?>css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets1/') ?>css/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets1/') ?>css/slicknav.css">
+    <link rel="stylesheet" href="<?= base_url('assets1/') ?>css/flaticon.css">
+    <link rel="stylesheet" href="<?= base_url('assets1/') ?>css/progressbar_barfiller.css">
+    <link rel="stylesheet" href="<?= base_url('assets1/') ?>css/gijgo.css">
+    <link rel="stylesheet" href="<?= base_url('assets1/') ?>css/animate.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets1/') ?>css/animated-headline.css">
+    <link rel="stylesheet" href="<?= base_url('assets1/') ?>css/magnific-popup.css">
+    <link rel="stylesheet" href="<?= base_url('assets1/') ?>css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets1/') ?>css/themify-icons.css">
+    <link rel="stylesheet" href="<?= base_url('assets1/') ?>css/slick.css">
+    <link rel="stylesheet" href="<?= base_url('assets1/') ?>css/nice-select.css">
+    <link rel="stylesheet" href="<?= base_url('assets1/') ?>css/style.css">
+
 </head>
